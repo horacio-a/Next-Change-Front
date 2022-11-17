@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import IndexPage from './pages/index';
+import ConversionPage from './pages/Conversion';
+import MultiConversionPage from './pages/MultiConversion';
+import ContactoPage from './pages/contacto';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+        <Route path='/' element={<IndexPage />} />
+        <Route path='/MultiConversion' element={<MultiConversionPage />} />
+        <Route path='/convertir' element={<ConversionPage />} />
+        <Route path='/contacto' element={<ContactoPage />} />
+        </Routes>
+
+      </BrowserRouter>
     </div>
   );
 }
