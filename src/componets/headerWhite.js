@@ -8,7 +8,7 @@ const HeaderWhite = (props) => {
         <header className="Index">
             <div className='conteiner1Index'>
                 <Link>
-                    <img src="Logos/LogoMblue.png" height={'75%'} alt={'Next Change logo'} />
+                    <img src="Logos/logoMediumblue.png" height={'75%'} alt={'Next Change logo'} />
                 </Link>
                 <div className="separadorIndex"></div>
                 <Link to={'/convertir'} className="Bloque-HeaderIndex">
