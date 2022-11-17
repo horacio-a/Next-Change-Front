@@ -23,7 +23,7 @@ const IndexPage = (props) => {
     useEffect(() => {
 
         const cargarRecursos = async () => {
-            axios.get(`${process.env.REACT_APP_PAGE}/dataindex/${process.env.REACT_APP_API_KEY}`).then((response) =>{
+            axios.get(`https://nextchangeback.herokuapp.com/dataindex/K3V1r4w8NHuyfyvaXF8L6BbXXZ1uMb`).then((response) =>{
                 SetDolarEuro(response.data.UsdEur.toLocaleString('es-MX')) 
                 SetDolarAED(response.data.UsdAed.toLocaleString('es-MX')) 
                 SetDolarReal(response.data.UsdBrl.toLocaleString('es-MX'))
