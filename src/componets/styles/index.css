@@ -1,5 +1,87 @@
 @media (min-width: 0px) and (max-width: 768px) {
     
+    .mainContacto {
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .conteinerContacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #233B6E;
+        color: #EFF0F4;
+        width: 75%;
+        height: 75%;
+        border-radius: 10px;
+    }
+    
+    #formContacto {
+        width: 100%;
+        height: 70%;
+        padding-top: 7.5%;
+        padding-bottom: 7.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    .conteinerContacto .titulo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 15%;
+        width: 100%;
+    
+        font-size: 3.5vh;
+    }
+    
+    #formContacto .context {
+        width: 75%;
+        height: 7.5%;
+        border: none;
+        border-radius: 10px;
+        text-align: center;
+    
+    }
+    
+    
+    .buttonEmail {
+        width: 50%;
+        height: 10%;
+        background: none;
+        font-size: 1.75vh;
+        border-radius: 10px;
+        color: #EFF0F4;
+        border: #EFF0F4 1.5px solid;
+    }
+    
+    
+    
+    .buttonEmail:hover {
+        cursor: pointer;
+        width: 50%;
+        height: 10%;
+        background-color: #EFF0F4;
+        font-size: 1.75vh;
+        border-radius: 10px;
+        color: #233B6E;
+    }
+    
+    #formContacto textarea{
+        width: 75%;
+        height: 15%;
+        border: none;
+        border-radius: 10px;
+    }
 }
 @media (min-width: 769px)  {
     body {
