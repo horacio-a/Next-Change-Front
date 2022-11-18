@@ -42,7 +42,7 @@ const HeaderWhite = (props) => {
             <header className="conteiner-header-Index movil">
                 <div className="icono-menu" id="header" >
                     <div className="conteiner1header">
-                        <img src="header-movil.png" onClick={OpenHeader} alt='/' />
+                        <img src="header-movil-active.png" onClick={OpenHeader} alt='/' />
                     </div>
 
                     <div className="conteiner2header">
@@ -52,7 +52,7 @@ const HeaderWhite = (props) => {
                 </div>
                 <div className={`cont-menu ${activeNav ? "active" : ""}`} id="menu">
                     <div className="conteiner-back">
-                        <img src="header-movil-active.png" onClick={OpenHeader}  alt='/'/>
+                        <img src="header-movil.png" onClick={OpenHeader}  alt='/'/>
                     </div>
                     <ul>
                         <li>
