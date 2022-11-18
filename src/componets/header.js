@@ -44,22 +44,40 @@ const Header = (props) => {
             <header className="conteiner-header movil">
                 <div className="icono-menu" id="header" >
                     <div className="conteiner1header">
-                        <img src="header-movil.png" onClick={OpenHeader} />
+                        <img src="header-movil.png" onClick={OpenHeader} alt='/' />
                     </div>
-                    
-                    <div  className="conteiner2header">
-                        <img src="Logos/LogoSwhite.png" />
+
+                    <div className="conteiner2header">
+                        <Link to={'/'}>
+                        <img src="Logos/LogoSwhite.png" alt='/' />
+                        </Link>
                     </div>
 
                 </div>
                 <div className={`cont-menu ${activeNav ? "active" : ""}`} id="menu">
-                    <ul>
-                        <li id="bntCalculadora" className="active">Calculadora</li>
-                        <li id="bntCronometro" onClick={OpenHeader}>Cronometro</li>
-                    </ul>
-                    <div className="moreinfo" id="btnInfo">
-                        Mas informacion
+                    <div className="conteiner-back">
+                        <img src="header-movil-active.png" onClick={OpenHeader} alt='/' />
                     </div>
+                    <ul>
+                        <li>
+                            <Link to={'/convertir'}>
+                                Convertir dos divisas
+                            </Link>
+                        </li>
+                        <li>
+                            <Link  to={'/MultiConversion'}> 
+                                Convertir varias divisas
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={'/contacto'}>
+                                Contacto
+                            </Link>
+                        </li>
+
+
+                    </ul>
+
                 </div>
             </header>
         </>
