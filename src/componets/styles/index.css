@@ -144,6 +144,13 @@
         width: 45%;
         height: 75%;
     }
+    .buttonConversion:focus{
+        border-radius: 10px;
+        color: #233B6E;
+        border: none;
+        background-color: #EFF0F4;
+        width: 45%;
+        height: 75%;    }
 
 
 
