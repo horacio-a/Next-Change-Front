@@ -117,7 +117,7 @@ const ConversionPage = (props) => {
                             <div className="subtitulo">Desde</div>
                             <div className="conteiner-select">
 
-                                <img src='' alt="" ref={imgDesde} height={'50vh'} />
+                                <img src='' alt="" ref={imgDesde} />
                                 <select value={desdeValue} onChange={cambiarDesde} className='one'>
                                     <option value={'test'}>Seleciones una moneda</option>
                                     {
@@ -143,9 +143,9 @@ const ConversionPage = (props) => {
                             <div className="subtitulo">a</div>
 
                             <div className="conteiner-select">
-                                <img src="" alt="" ref={imgHasta} height={'50vh'}></img>
+                                <img src="" alt="" ref={imgHasta} ></img>
                                 <select value={hastaValue} onChange={CambiarHasta} className='one'>
-                                    <option value={'test'}>Seleciones una moneda</option>
+                                    <option value={'test'}  className='optionDefault'>Seleciones una moneda</option>
 
                                     {
                                         loading ? (

@@ -71,7 +71,7 @@ const MultiConversionPage = (props) => {
             <main className="main-multi">
                 <div className="conteiner-principal">
                     <div className="conteiner-opciones">
-                        <img src=" " alt="" ref={imgDesde} height={'50% '} />
+                        <img src=" " alt="" ref={imgDesde} height={'50% '} className='imgMulti' />
 
                         <select value={Moneda} onChange={cambiarDesde} className='multi'>
                             <option value={'test'} className='optionDefault'>Seleciones una moneda</option>
