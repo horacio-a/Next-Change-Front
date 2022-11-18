@@ -22,7 +22,6 @@ const MultiConversionPage = (props) => {
     const [ValorConvesion, setValor] = useState('')
     const [Moneda, setMoneda] = useState([])
 
-    const baseURL = `${process.env.REACT_APP_PAGE}/info/${process.env.REACT_APP_API_KEY} `
 
     const traerConversion = async () => {
         setConvertido(false)
@@ -51,6 +50,7 @@ const MultiConversionPage = (props) => {
 
 
     useEffect(() => {
+        const baseURL = `${process.env.REACT_APP_PAGE}/info/${process.env.REACT_APP_API_KEY} `
 
         const cargarRecursos = async () => {
             setLoading(true);
@@ -104,7 +104,7 @@ const MultiConversionPage = (props) => {
                         </div>
                         {
                             Convertido ? (
-                                <p>ingrese una divisa</p>
+                                <div className="tituloPrevio" >ingrese una divisa</div>
                             ) : (
 
                                 loading1 ? (

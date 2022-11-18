@@ -297,7 +297,7 @@
 
 
 
-    main.main-multi{
+    main.main-multi {
         width: 100%;
         height: 90vh;
         display: flex;
@@ -307,27 +307,31 @@
     }
 
 
-    main.main-multi .conteiner-principal{
+    main.main-multi .conteiner-principal {
         height: 75%;
         width: 80%;
+        padding: 5%;
+
         background-color: #233B6E;
         border-radius: 10px;
         color: #EFF0F4;
     }
 
-    .conteiner-principal .conteiner-opciones{
+    .conteiner-principal .conteiner-opciones {
         height: 20%;
-        width: 100%; 
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items:  center;
+        align-items: center;
 
     }
-    .imgMulti{
+
+    .imgMulti {
         display: none;
     }
-    select.multi{
+
+    select.multi {
         width: 80%;
         height: 45%;
         border-radius: 10px;
@@ -339,7 +343,7 @@
         font-family: 'Rubik', sans-serif;
     }
 
-    .number-conversionmulti{
+    .number-conversionmulti {
         appearance: none;
 
         width: 80%;
@@ -350,64 +354,80 @@
     }
 
 
-    .conteiner-principal .conteiner-info{
+    .conteiner-principal .conteiner-info {
         height: 70%;
-        width: 100%; 
+        width: 100%;
         overflow-y: scroll;
         scroll-behavior: smooth;
+    }
 
-    }    
-    .bloque-tituloInfo{
+    .bloque-tituloInfo {
         width: 100%;
         height: 10%;
-        display: flex; 
+        display: flex;
         justify-content: space-around;
         align-items: center;
     }
 
-    .unidad-registros{
+    .unidad-registros {
         width: 100%;
         height: 15%;
         display: flex;
     }
-    .bloque-ImgAndCode{
+
+    .bloque-ImgAndCode {
         width: 75%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
     }
-    .bloque-ImgAndCode .nombres{
+
+    .bloque-ImgAndCode .nombres {
         margin-left: 2.5%;
         text-align: start;
 
     }
 
 
-    .bloque-ImgAndCode img{
+    .bloque-ImgAndCode img {
         height: 50%;
 
     }
-    .bloque-ImgAndCode .nombres.codigo{
+
+    .bloque-ImgAndCode .nombres.codigo {
         display: none;
     }
-    .Conteiner-value{
+
+    .Conteiner-value {
         width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    
-
-
-
-    .conteiner-principal .conteiner-button{
-        height: 10%;
-        width: 100%; 
+    .tituloPrevio{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #EFF0F4;
     }
 
-    .buttonConversionmulti{
+
+
+    .conteiner-principal .conteiner-button {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonConversionmulti {
         background: none;
         border: #EFF0F4 1.5px solid;
         color: #EFF0F4;
@@ -679,9 +699,11 @@
         justify-content: center;
         align-items: center;
     }
+
     .conteiner-select img {
         height: 100%;
-        margin-right: 2%;    }
+        margin-right: 2%;
+    }
 
 
     select.one {
@@ -924,7 +946,17 @@
 
     }
 
-
+    .tituloPrevio{
+        width: 100%;
+        height: 75%;
+        font-size: 2vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #EFF0F4;
+    }
+    
     .conteiner-principal {
         padding-right: 1%;
         width: 74%;
