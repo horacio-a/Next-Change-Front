@@ -42,7 +42,7 @@ const IndexPage = (props) => {
             <HeaderWhite />
             <main className="index">
                 <div className="columna">
-                    <img src="Logos/LogoLwhite.png" style={{ width: '65%' }} alt='Next change' />
+                    <img src="Logos/LogoLwhite.png" alt='Next change' className="imgLogo" />
                     <div className="tablaConversion">
                         <div className="ColumnaImgText">
                             <p> <img src="imgMonedas/USD.png" alt="USD" /> USD   <img src="imgMonedas/EUR.png" alt="EUR" />EUR</p>

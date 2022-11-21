@@ -144,6 +144,65 @@
     }
 
 
+    main.index{
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #233B6E;
+
+    }
+
+    main.index .columna{
+        display: flex; 
+        justify-content: center;
+        align-items:  center;
+        flex-direction: column;
+        
+    }
+
+
+    main.index .columna img{
+        width: 85%;
+        
+    }
+
+    main.index .columna .conteiner-index{
+        width: 100%;
+        height: 50%;
+        display: flex; 
+        justify-content: center;
+        align-items:  center;
+        flex-direction: column;
+    }
+
+    main.index .columna .conteiner-index p{
+        color: #EFF0F4;
+        font-size: 2vh;
+        margin: 2%;
+
+    }
+
+    .TituloIndex{
+        color: #233B6E;
+        width: 85%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        background-color: #EFF0F4;
+        border-radius: 10px;
+        font-size: 2.5vh;
+
+
+    }
+
+    .tablaConversion{
+        display: none;
+
+    }
+    
+
 
     main.other {
         height: 90vh;
@@ -540,7 +599,10 @@
         font-family: 'Rubik', sans-serif;
     }
 
-
+    main.index .columna .imgLogo{
+        width: 65%;
+        
+    }
 
 
     header.other {

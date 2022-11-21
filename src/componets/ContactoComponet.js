@@ -1,8 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from 'emailjs-com'
+import toast, { Toaster } from 'react-hot-toast';
 
 const FormularioEmail = (props) => {
     const form = useRef();
+    const notify = () =>  {
+        toast.success('el email se envio');
+    } 
 
     const comprobarEstado = () => {
         if (form.current.user_name.value === '') {
@@ -17,21 +21,21 @@ const FormularioEmail = (props) => {
     }
 
     const enviarEmail = (e) => {
-        e.preventDefault();
 
         const Enviar = comprobarEstado()
         if (Enviar === true) {
+
             emailjs.sendForm(
                 process.env.REACT_APP_SERVICE,
                 process.env.REACT_APP_TEMPLATE,
                 form.current,
                 process.env.REACT_APP_APIPUBLIC
             ).then((result) => {
+                
                 console.log(result.text);
             }, (error) => {
                 console.log(error.text);
             });
-            
 
 
         } else (
@@ -44,7 +48,6 @@ const FormularioEmail = (props) => {
     return (
         <>
             <main className="mainContacto">
-
                 <div className="conteinerContacto">
                     <div className="titulo">  Contacto </div>
                     <form ref={form} onSubmit={enviarEmail} id='formContacto'>
@@ -59,7 +62,8 @@ const FormularioEmail = (props) => {
                         <input type="submit" value="Enviar" className="buttonEmail" />
                     </form>
                 </div>
-
+                <Toaster />
+                
             </main>
 
 
