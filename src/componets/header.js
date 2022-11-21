@@ -56,7 +56,7 @@ const Header = (props) => {
                 </div>
                 <div className={`cont-menu ${activeNav ? "active" : ""}`} id="menu">
                     <div className="conteiner-back">
-                        <img src="header-movil-active.png" onClick={OpenHeader} alt='/' />
+                        <img src="header-movil.png" onClick={OpenHeader} alt='/' />
                     </div>
                     <ul>
                         <li>
