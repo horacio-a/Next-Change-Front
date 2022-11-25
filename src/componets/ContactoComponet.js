@@ -4,23 +4,24 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const FormularioEmail = (props) => {
     const form = useRef();
-    const notify = () =>  {
-        toast.success('el email se envio');
-    } 
+
 
     const comprobarEstado = () => {
-        if (form.current.user_name.value === '') {
-            return false
-        } else if (form.current.subject.value === '') {
-            return false
-        } else if (form.current.user_email.value === '') {
-            return false
-        } else {
+        if (form.current.user_name.value !== '' && form.current.subject.value !== '' && form.current.user_email.value !== '') {
             return true
+        } else {
+            return false
+
         }
     }
 
+    // ...
+    
+
+
     const enviarEmail = (e) => {
+        e.preventDefault();
+        const ToastLoading = toast.loading('Loading...');
 
         const Enviar = comprobarEstado()
         if (Enviar === true) {
@@ -31,16 +32,28 @@ const FormularioEmail = (props) => {
                 form.current,
                 process.env.REACT_APP_APIPUBLIC
             ).then((result) => {
-                
+                toast.dismiss(ToastLoading);
+                toast.success('El mensaje fue enviado');
                 console.log(result.text);
             }, (error) => {
+                toast.dismiss(ToastLoading);
+                toast.error('Error');
                 console.log(error.text);
             });
 
+            form.current.user_name.value = ''
+            form.current.subject.value = ''
+            form.current.user_email.value = ''
+            form.current.message.value = ''
 
-        } else (
+
+        } else {
+            toast.dismiss(ToastLoading);
+            toast.error('Complete todos los campos');
             console.log('no enviar')
-        )
+        }
+            
+        
 
 
     }
@@ -63,7 +76,7 @@ const FormularioEmail = (props) => {
                     </form>
                 </div>
                 <Toaster />
-                
+
             </main>
 
 

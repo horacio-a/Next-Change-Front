@@ -23,16 +23,17 @@ const MultiConversionPage = (props) => {
     const [Moneda, setMoneda] = useState([])
 
 
+
     const traerConversion = async () => {
         setConvertido(false)
         setLoading1(true)
-        axios.get(`${process.env.REACT_APP_PAGE}/especificall/${Moneda}/${ValorConvesion}/${process.env.REACT_APP_API_KEY}`).then((response) => {
-            setConversiones(response.data)
-            console.log(response.data)
+        let response = await axios.get(`${process.env.REACT_APP_PAGE}/especificall/${Moneda}/${ValorConvesion}/${process.env.REACT_APP_API_KEY}`)
+        setConversiones(response.data)
+        setTimeout(() => {
+            setLoading1(false)
 
-        })
-        setLoading1(false)
-
+        }, 1000);
+        console.log(loading1)
     }
     const cambiarFotoDesde = (evn) => {
         let nombreFoto = evn.slice(1, evn.length)
@@ -76,9 +77,7 @@ const MultiConversionPage = (props) => {
                         <select value={Moneda} onChange={cambiarDesde} className='multi'>
                             <option value={'test'} className='optionDefault'>Seleciones una moneda</option>
                             {
-                                loading ? (
-                                    <p>cargando</p>
-                                ) : (
+                                loading ? <p>cargando</p>: (
                                     recursos.map(item => <ListaComponet
                                         id={item.id}
                                         name={item.name}
@@ -103,12 +102,12 @@ const MultiConversionPage = (props) => {
                             <div className="unidad">Valor</div>
                         </div>
                         {
-                            Convertido ? (
-                                <div className="tituloPrevio" >ingrese una divisa</div>
-                            ) : (
+                            Convertido ? <div className="tituloPrevio" >ingrese una divisa</div> : (
 
                                 loading1 ? (
-                                    <p>cargando</p>
+                                    <div className="conteinerloader">
+                                    <span className="loader2"></span>
+                                    </div>
                                 ) : (
                                     Conversiones.map(item => <Listadecomversion
                                         code={item.code}

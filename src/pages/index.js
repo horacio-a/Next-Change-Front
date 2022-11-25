@@ -15,22 +15,17 @@ const IndexPage = (props) => {
     const [EuroGPBValue, SetEuroGPB] = useState('')
 
 
-
-
-
-
-
     useEffect(() => {
 
         const cargarRecursos = async () => {
-            axios.get(`https://nextchangeback.herokuapp.com/dataindex/K3V1r4w8NHuyfyvaXF8L6BbXXZ1uMb`).then((response) =>{
-                SetDolarEuro(response.data.UsdEur.toLocaleString('es-MX')) 
-                SetDolarAED(response.data.UsdAed.toLocaleString('es-MX')) 
+            axios.get(`https://nextchangeback.herokuapp.com/dataindex/K3V1r4w8NHuyfyvaXF8L6BbXXZ1uMb`).then((response) => {
+                SetDolarEuro(response.data.UsdEur.toLocaleString('es-MX'))
+                SetDolarAED(response.data.UsdAed.toLocaleString('es-MX'))
                 SetDolarReal(response.data.UsdBrl.toLocaleString('es-MX'))
                 SetEuroGPB(response.data.EurGBp.toLocaleString('es-MX'))
             })
         }
-        
+
         cargarRecursos();
 
     }, []);
@@ -45,10 +40,10 @@ const IndexPage = (props) => {
                     <img src="Logos/LogoLwhite.png" alt='Next change' className="imgLogo" />
                     <div className="tablaConversion">
                         <div className="ColumnaImgText">
-                            <p> <img src="imgMonedas/USD.png" alt="USD" /> USD   <img src="imgMonedas/EUR.png" alt="EUR" />EUR</p>
-                            <p> <img src="imgMonedas/USD.png" alt="USD" />USD    <img src="imgMonedas/AED.png" alt="AED" />AED </p>
-                            <p> <img src="imgMonedas/USD.png" alt="USD" />USD  <img src="imgMonedas/BRL.png" alt="BRL" />BRL</p>
-                            <p> <img src="imgMonedas/EUR.png" alt="EUR" />EUR   <img src="imgMonedas/GBP.png" alt="GBP" />GBP</p>
+                            <p> <img src="imgMonedas/USD.png" alt="USD" />USD<img src="imgMonedas/EUR.png" alt="EUR" />EUR</p>
+                            <p> <img src="imgMonedas/USD.png" alt="USD" />USD<img src="imgMonedas/AED.png" alt="AED" />AED</p>
+                            <p> <img src="imgMonedas/USD.png" alt="USD" />USD<img src="imgMonedas/BRL.png" alt="BRL" />BRL</p>
+                            <p> <img src="imgMonedas/EUR.png" alt="EUR" />EUR<img src="imgMonedas/GBP.png" alt="GBP" />GBP</p>
                         </div>
                         <div className="ColumnaValue">
                             <p>{DolarEuroValue} € </p>
