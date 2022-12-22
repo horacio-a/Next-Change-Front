@@ -64,6 +64,7 @@ const FormularioEmail = (props) => {
                 <div className="conteinerContacto">
                     <div className="titulo">  Contacto </div>
                     <form ref={form} onSubmit={enviarEmail} id='formContacto'>
+                        <input type={'hidden'} name='page_name'></input>
                         <label>Nombre</label>
                         <input type="text" name="user_name" className="context" />
                         <label>Asunto</label>
