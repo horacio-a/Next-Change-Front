@@ -25,7 +25,7 @@ const IndexPage = (props) => {
                 SetEuroGPB(response.data.EurGBp.toLocaleString('es-MX'))
             })
         }
-
+        console.log(process.env.REACT_APP_PAGE)
         cargarRecursos();
 
     }, []);
