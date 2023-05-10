@@ -266,7 +266,8 @@
         align-items: center;
     }
 
-    .conteiner-select img {
+
+    .conteinerImgSelect img {
         height: 50%;
     }
 
@@ -762,9 +763,12 @@
         align-items: center;
     }
 
+    .conteinerImgSelect{
+        height: 100%;
+        width: 10%;
+    }
     .conteiner-select img {
         height: 100%;
-        margin-right: 2%;
     }
 
 
@@ -973,6 +977,12 @@
 
     .conteiner-index {
         width: 50%;
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .ColumnaImgText {
@@ -1004,8 +1014,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
-
     }
 
     .tituloPrevio {
@@ -1348,3 +1356,160 @@
     align-items: center;
     justify-content: center;
 }
+
+
+.test{
+    width: 50%;
+    height: 10%;
+    background-color: #233B6E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner-select .lista{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 2vh;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: #FFF;
+    border-radius:  5px;
+    border: #DDDDDD solid 3px ;
+
+}
+
+.conteiner-select .textLista{
+    margin-left: 15%;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteiner-select .conteinerTriangleLista{
+    width: 15%;
+    height: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteinerTriangleLista i{
+    color: #c5bfbf;
+    font-size: 1.75vh;
+}
+
+
+.conteiner-select .lista.active{
+    border-radius:  5px 5px 0px 0px;
+    border: #DDDDDD solid ;
+    border-width: 3px 3px 0px 3px;
+}
+
+.conteiner-select .inputSearch{
+    outline: none;
+    border: #DDDDDD 3px solid;
+    width: 75%;
+    height: 50%;
+    margin: 0;
+    font-size: 1.55vh;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
+
+
+.conteiner-select .blockLista.desactive{
+    display: none;
+}
+
+.conteiner-select .blockLista.active{
+    z-index: 10;
+    display: block;
+    position: absolute;
+    transform: translate(0% , 25%);
+    width: 100%;
+    height: 20vh;
+    overflow-y: scroll;
+    border-radius: 0px 0px 5px 5px;
+    border-width: 0px 3px 3px 3px;
+    border-style: solid;
+    border-color: #DDDDDD;
+    background-color: #FFF;
+
+}
+
+
+.conteiner-select .blockLista.active > *:nth-child(2n){
+    background-color: #FFF;
+}
+.conteiner-select .blockLista.active > *:nth-child(2n+1){
+    background-color: #DDDDDD  ;
+}
+
+.conteiner-select .blockLista.active > *:nth-child(2n):hover{
+    background-color: #5573b4;
+}
+.conteiner-select .blockLista.active > *:nth-child(2n+1):hover{
+    background-color: #5573b4  ;
+}
+
+
+.conteiner-select .blockLista.active::-webkit-scrollbar {
+    display: none;
+}
+
+.conteinerForPosition{
+    width: 64%;
+    height: 4vh;
+    position: relative;
+}
+
+
+
+
+.unitBlockLista{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+}
+.unitBlockLista img{
+    margin-left: 5%;
+    width: 10%;
+    height: auto;
+}
+
+.codeBlock{
+    width: 15%;
+}
+.nameBlock{
+    width: 75%;
+}
+
+.conteiner-select .SearchLista.desactive{
+    display: none;
+}
+
+.conteiner-select .SearchLista.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+    background-color: #FFF;
+    border-width: 3px 3px 0px 3px;
+    border-style: solid;
+    border-color: #DDDDDD;
+}
+

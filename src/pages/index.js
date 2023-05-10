@@ -61,9 +61,7 @@ const IndexPage = (props) => {
                             ¿Quienes somos?
                         </div>
                         <p>
-                            Somos una Plataforma que facilitamos
-                            una conversion son un nivel
-                            de precision realtivamente buena
+                            Cambia tus divisas de manera segura y eficiente con Next Change, tasas actualizadas y procesamiento rápido
                         </p>
                     </div>
                     <div className="conteiner-index">
@@ -71,10 +69,7 @@ const IndexPage = (props) => {
                             ¿Quieres ponerte en contacto?
                         </div>
                         <p>
-                            En el menu encontras la pestaña
-                            contacto, en caso de que solicitar la API
-                            o reportar un problema puedes usar
-                            esa pestaña
+                        ¿Necesitas una solución de conversión de divisas automatizada? pregunta por nuestra API de Next Change, procesamiento rápido y seguro
                         </p>
                     </div>
 
