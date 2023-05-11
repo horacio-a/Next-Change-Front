@@ -763,6 +763,15 @@
         align-items: center;
     }
 
+    .conteiner-select.small {
+        width: 35%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .conteinerImgSelect{
         height: 100%;
         width: 10%;
@@ -1059,6 +1068,17 @@
         border-radius: 5px;
     }
 
+    .imgMulti{
+        width: 5%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .imgMulti img{
+        height: 45%;
+    }
     .number-conversionmulti {
         margin: 0%;
         font-family: 'Rubik', sans-serif;
@@ -1097,6 +1117,18 @@
 
     .optionDefault {
         display: none;
+    }
+
+    .bloque-tituloInfo input{
+        border-radius: 5px;
+        outline: none;
+        border: #DDDDDD 3px solid;
+        width: 35%;
+        height: 65%;
+        margin: 0;
+        font-size: 1.55vh;
+        font-family: 'Rubik', sans-serif;
+        text-align: center;
     }
 
     .bloque-tituloInfo {
@@ -1466,13 +1498,17 @@
     display: none;
 }
 
-.conteinerForPosition{
+.conteiner-select .conteinerForPosition{
     width: 64%;
     height: 4vh;
     position: relative;
 }
 
-
+.conteiner-select.small .conteinerForPosition{
+    width: 100%;
+    height: 45%;
+    position: relative;
+}
 
 
 .unitBlockLista{

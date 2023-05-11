@@ -136,7 +136,7 @@ const ConversionPage = () => {
             <Header />
             <main className="other">
                 <div className="conteiner-Conversion">
-                    <div className="Titulo"> {cantidValue} {SignoDesde} {desdeName} {hastaName}  </div>
+                    <div className="Titulo"> {cantidValue} {SignoDesde} {desdeName} {hastaName != '' && desdeName != '' ? 'a' : ''} {Signohasta} {hastaName}  </div>
 
                     <div className="conteineres-columnas">
 
