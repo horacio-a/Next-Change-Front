@@ -112,6 +112,7 @@
 
     /* Estilos para el contenedor del Menú */
     .cont-menu.active {
+        z-index: 10;
         background-color: #233B6E;
         border-right: 3px solid #DDDDDD;
         width: 50%;
