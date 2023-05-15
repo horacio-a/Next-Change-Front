@@ -12,8 +12,36 @@
         text-decoration: none;
     }
 
+    .bloque-tituloInfo input {
+        border-radius: 5px;
+        outline: none;
+        border: #DDDDDD 3px solid;
+        width: 100%;
+        height: 65%;
+        margin: 0;
+        font-size: 1.55vh;
+        font-family: 'Rubik', sans-serif;
+        text-align: center;
+    }
 
+    .codeBlock {
+        font-size: 1.75vh;
+        width: 15%;
+    }
 
+    .nameBlock {
+        font-size: 1.75vh;
+        width: 75%
+    }
+
+    .conteiner-select .textLista {
+        font-size: 1.50vh;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 
     .conteiner-header.movil {
@@ -262,13 +290,21 @@
         width: 100%;
         height: 75%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
     }
 
 
     .conteinerImgSelect img {
         height: 50%;
+    }
+
+    .conteinerImgSelect {
+        height: 100%;
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
@@ -312,6 +348,8 @@
         border: none;
         background-color: #EFF0F4;
         border-radius: 10px;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
 
     }
 
@@ -405,8 +443,8 @@
 
     .number-conversionmulti {
         appearance: none;
-
-        width: 80%;
+        text-align: center;
+        width: 100%;
         height: 40%;
         border: none;
         background-color: #EFF0F4;
@@ -415,7 +453,8 @@
 
 
     .conteiner-principal .conteiner-info {
-        height: 70%;
+        margin-top: 5%;
+        height: 65%;
         width: 100%;
         overflow-y: scroll;
         scroll-behavior: smooth;
@@ -772,10 +811,11 @@
     }
 
 
-    .conteinerImgSelect{
+    .conteinerImgSelect {
         height: 100%;
         width: 10%;
     }
+
     .conteiner-select img {
         height: 100%;
     }
@@ -1068,7 +1108,7 @@
         border-radius: 5px;
     }
 
-    .imgMulti{
+    .imgMulti {
         width: 5%;
         height: 100%;
         display: flex;
@@ -1076,9 +1116,10 @@
         align-items: center;
     }
 
-    .imgMulti img{
+    .imgMulti img {
         height: 45%;
     }
+
     .number-conversionmulti {
         margin: 0%;
         font-family: 'Rubik', sans-serif;
@@ -1119,7 +1160,7 @@
         display: none;
     }
 
-    .bloque-tituloInfo input{
+    .bloque-tituloInfo input {
         border-radius: 5px;
         outline: none;
         border: #DDDDDD 3px solid;
@@ -1302,6 +1343,27 @@
         border: none;
         border-radius: 10px;
     }
+
+
+    .conteiner-select .textLista {
+        font-size: 1.85vh;
+        width: 85%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .codeBlock {
+        font-size: 1.75vh;
+        width: 15%;
+    }
+
+    .nameBlock {
+        font-size: 1.75vh;
+        width: 75%
+    }
+
 }
 
 .loader {
@@ -1380,7 +1442,7 @@
     }
 }
 
-.conteinerloader{
+.conteinerloader {
     width: 100%;
     height: 100%;
     display: flex;
@@ -1390,7 +1452,7 @@
 }
 
 
-.test{
+.test {
     width: 50%;
     height: 10%;
     background-color: #233B6E;
@@ -1400,10 +1462,10 @@
     align-items: center;
 }
 
-.conteiner-select .lista{
+.conteiner-select .lista {
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     font-family: 'Rubik', sans-serif;
     font-size: 2vh;
@@ -1412,41 +1474,34 @@
     height: 100%;
     color: black;
     background-color: #FFF;
-    border-radius:  5px;
-    border: #DDDDDD solid 3px ;
+    border-radius: 5px;
+    border: #DDDDDD solid 3px;
 
 }
 
-.conteiner-select .textLista{
-    margin-left: 15%;
-    width: 70%;
+
+
+.conteiner-select .conteinerTriangleLista {
+    width: 15%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.conteiner-select .conteinerTriangleLista{
-    width: 15%;
-    height: 100%;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.conteinerTriangleLista i{
+.conteinerTriangleLista i {
     color: #c5bfbf;
     font-size: 1.75vh;
 }
 
 
-.conteiner-select .lista.active{
-    border-radius:  5px 5px 0px 0px;
-    border: #DDDDDD solid ;
+.conteiner-select .lista.active {
+    border-radius: 5px 5px 0px 0px;
+    border: #DDDDDD solid;
     border-width: 3px 3px 0px 3px;
 }
 
-.conteiner-select .inputSearch{
+.conteiner-select .inputSearch {
     outline: none;
     border: #DDDDDD 3px solid;
     width: 75%;
@@ -1458,15 +1513,15 @@
 }
 
 
-.conteiner-select .blockLista.desactive{
+.conteiner-select .blockLista.desactive {
     display: none;
 }
 
-.conteiner-select .blockLista.active{
+.conteiner-select .blockLista.active {
     z-index: 10;
     display: block;
     position: absolute;
-    transform: translate(0% , 25%);
+    transform: translate(0%, 25%);
     width: 100%;
     height: 20vh;
     overflow-y: scroll;
@@ -1479,18 +1534,20 @@
 }
 
 
-.conteiner-select .blockLista.active > *:nth-child(2n){
+.conteiner-select .blockLista.active>*:nth-child(2n) {
     background-color: #FFF;
 }
-.conteiner-select .blockLista.active > *:nth-child(2n+1){
-    background-color: #DDDDDD  ;
+
+.conteiner-select .blockLista.active>*:nth-child(2n+1) {
+    background-color: #DDDDDD;
 }
 
-.conteiner-select .blockLista.active > *:nth-child(2n):hover{
+.conteiner-select .blockLista.active>*:nth-child(2n):hover {
     background-color: #5573b4;
 }
-.conteiner-select .blockLista.active > *:nth-child(2n+1):hover{
-    background-color: #5573b4  ;
+
+.conteiner-select .blockLista.active>*:nth-child(2n+1):hover {
+    background-color: #5573b4;
 }
 
 
@@ -1498,20 +1555,22 @@
     display: none;
 }
 
-.conteiner-select .conteinerForPosition{
+.conteiner-select .conteinerForPosition {
     width: 64%;
     height: 4vh;
     position: relative;
 }
 
-.conteiner-select.small .conteinerForPosition{
+.conteiner-select.small .conteinerForPosition {
     width: 100%;
     height: 45%;
+
     position: relative;
 }
 
 
-.unitBlockLista{
+.unitBlockLista {
+    color: black;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -1519,24 +1578,20 @@
     width: 100%;
     height: 75px;
 }
-.unitBlockLista img{
+
+.unitBlockLista img {
     margin-left: 5%;
     width: 10%;
     height: auto;
 }
 
-.codeBlock{
-    width: 15%;
-}
-.nameBlock{
-    width: 75%;
-}
 
-.conteiner-select .SearchLista.desactive{
+
+.conteiner-select .SearchLista.desactive {
     display: none;
 }
 
-.conteiner-select .SearchLista.active{
+.conteiner-select .SearchLista.active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1548,4 +1603,3 @@
     border-style: solid;
     border-color: #DDDDDD;
 }
-
