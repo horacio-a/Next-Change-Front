@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Header from "../componets/header";
 import '../componets/styles/index.css'
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 import Listadecomversion from "../componets/Registros";
 
@@ -22,11 +23,23 @@ const MultiConversionPage = (props) => {
     const [loading1, setLoading1] = useState(false)
     const [loading, setLoading] = useState(false)
     const [ValorConvesion, setValor] = useState('')
-    const [Moneda, setMoneda] = useState([])
 
 
 
     const traerConversion = async () => {
+
+        if (desdeValue === '') {
+            toast.error('Por favor, selecciona la divisa de origen para realizar la conversión.');
+            return
+        }
+        if (ValorConvesion === '') {
+            toast.error('Por favor, ingresa un valor para realizar la conversión.');
+            return
+        }
+        if (ValorConvesion <= 0) {
+            toast.error('El valor ingresado debe ser mayor a 0. Inténtalo de nuevo.');
+            return
+        }
         setConvertido(false)
         setLoading1(true)
         let response = await axios.get(`${process.env.REACT_APP_PAGE}/especificall/${desdeValue}/${ValorConvesion}/${process.env.REACT_APP_API_KEY}`)
@@ -78,11 +91,9 @@ const MultiConversionPage = (props) => {
     const [termConversion, setTermConversion] = useState("");
     const [SymboltermConversion, setSymbolTermConversion] = useState("");
     const inputDesde = useRef('')
-    const inputHasta = useRef('')
     const [listStateDesde, setListStateDesde] = useState(true)
     const [listStateHasta, setListStateHasta] = useState(true)
 
-    const [search, setsearch] = useState('')
 
     const openlist = (option) => {
         if (option === 'desde') {
@@ -127,6 +138,7 @@ const MultiConversionPage = (props) => {
 
     return (
         <>
+            <Toaster />
             <Header />
             <main className="main-multi">
                 <div className="conteiner-principal">
