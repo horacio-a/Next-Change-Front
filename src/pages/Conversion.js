@@ -5,6 +5,7 @@ import '../componets/styles/index.css'
 import ListaMonedas from "../componets/ListaMonedas";
 import axios from 'axios';
 import Header from "../componets/header";
+import toast, { Toaster } from 'react-hot-toast';
 
 
 const baseURL = `${process.env.REACT_APP_PAGE}/info/${process.env.REACT_APP_API_KEY} `
@@ -27,6 +28,25 @@ const ConversionPage = () => {
 
 
     const traerConversion = async () => {
+        if (desdeValue === '') {
+            toast.error('Por favor, selecciona la divisa de origen para realizar la conversión.');
+            return
+        }
+        if (hastaValue === '') {
+            toast.error('Por favor, selecciona la divisa de destino para completar la conversión.');
+            return
+        }
+        if (cantidValue === '') {
+            toast.error('Por favor, ingresa un valor para realizar la conversión.');
+            return
+        }
+        if (cantidValue <= 0) {
+            toast.error('El valor ingresado debe ser mayor a 0. Inténtalo de nuevo.');
+            return
+        }
+
+
+
         setConverLoading(true)
         console.log(converLoadind)
         let response = await axios.get(`${process.env.REACT_APP_PAGE}/conver/${desdeValue}/${hastaValue}/${cantidValue}/${process.env.REACT_APP_API_KEY}`)
@@ -132,7 +152,8 @@ const ConversionPage = () => {
 
 
     return (
-        <>
+        <>                <Toaster />
+
             <Header />
             <main className="other">
                 <div className="conteiner-Conversion">
