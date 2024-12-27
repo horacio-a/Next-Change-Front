@@ -10,10 +10,10 @@ const Listadecomversion = (props) => {
 
         <div className="unidad-registros">
             <div className="bloque-ImgAndCode">
-                <img src={`imgMonedas/${img}.png`} height={'50px'} alt="" />
+                <img src={`imgMonedas/${img}.png`} height={'50px'} width={'50px'} alt="" />
                 <div className="nombres codigo">{code}</div>
                 <div className="nombres"> {name}</div>
-        
+
             </div>
             <div className="Conteiner-value">
                 {valor}{symbol_native}
